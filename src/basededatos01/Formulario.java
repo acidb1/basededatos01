@@ -80,7 +80,7 @@ private JPanel contentPane;
       public void actionPerformed(ActionEvent arg0) {
         labelResultado.setText("");        
         try {
-          Connection conexion=DriverManager.getConnection("jdbc:mysql://localhost/bd1","root" ,"q1w2e3");
+          Connection conexion=DriverManager.getConnection("jdbc:mysql://localhost/bd1","root" ,"queteimporta");
           Statement comando=conexion.createStatement();
           comando.executeUpdate("insert into articulos(descripcion,precio) values ('"+tf1.getText()+"',"+tf2.getText()+")");
           conexion.close();
