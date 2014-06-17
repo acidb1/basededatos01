@@ -106,7 +106,7 @@ private JPanel contentPane;
         tf1.setText("");
         tf2.setText("");        
         try {
-          Connection conexion=DriverManager.getConnection("jdbc:mysql://localhost/bd1","root" ,"q1w2e3");
+          Connection conexion=DriverManager.getConnection("jdbc:mysql://localhost/bd1","root" ,"queteimporta");
           Statement comando=conexion.createStatement();
           ResultSet registro = comando.executeQuery("select descripcion,precio from articulos where codigo="+tf3.getText());
           if (registro.next()==true) {
